@@ -1,0 +1,257 @@
+[
+  "https://m.vk.com/",
+  200,
+  [
+    [
+      "Cookies",
+      [
+        {
+          "string": "remixir",
+          "certainty": 100
+        },
+        {
+          "string": "remixlang",
+          "certainty": 100
+        },
+        {
+          "string": "remixstlid",
+          "certainty": 100
+        },
+        {
+          "string": "remixir",
+          "certainty": 100
+        },
+        {
+          "string": "remixlgck",
+          "certainty": 100
+        },
+        {
+          "string": "remixstid",
+          "certainty": 100
+        },
+        {
+          "string": "remixQUIC",
+          "certainty": 100
+        },
+        {
+          "string": "remixaudio_show_alert_today",
+          "certainty": 100
+        },
+        {
+          "string": "remixff",
+          "certainty": 100
+        },
+        {
+          "string": "remixua",
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "Country",
+      [
+        {
+          "string": "RUSSIAN FEDERATION",
+          "module": "RU",
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "HTML5",
+      [
+        {
+          "regexp": [
+            "<!DOCTYPE html>"
+          ],
+          "regexp_compiled": {
+            "$regex": "<!DOCTYPE html>",
+            "$options": "im"
+          },
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "HTTPServer",
+      [
+        {
+          "name": "server string",
+          "string": "kittenx",
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "HttpOnly",
+      [
+        {
+          "string": [
+            [
+              "remixir"
+            ],
+            [
+              "remixir"
+            ],
+            [
+              "remixlgck"
+            ]
+          ],
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "IP",
+      [
+        {
+          "string": "87.240.190.67",
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "PasswordField",
+      [
+        {
+          "name": "rss link type",
+          "regexp": [
+            "<input class=\"TextInput__native\" type=\"password\" name=\"pass\" value=\"\" spellcheck=\"\" placeholder=\"Пароль\" autocomplete=\"current-password\" oninput=\"TextInput.onChange(event);\" onblur=\"TextInput.onBlur(event, this);\" onfocus=\"TextInput.onFocus(event, this);\" />"
+          ],
+          "regexp_compiled": {
+            "$regex": "<input [^>]*?type=[\"']password[\"'][^>]*>",
+            "$options": "im"
+          },
+          "certainty": 100
+        },
+        {
+          "name": "field name",
+          "string": "pass",
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "PHP",
+      [
+        {
+          "version": [
+            "7.4.111564"
+          ],
+          "search": "headers[x-powered-by]",
+          "regexp_compiled": {
+            "$regex": "[^\\r^\\n]*PHP/([^\\s^\\r^\\n]+)",
+            "$options": "m"
+          },
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "Script",
+      [
+        {
+          "regexp": [
+            " ",
+            ">"
+          ],
+          "regexp_compiled": {
+            "$regex": "<script(\\s|>)",
+            "$options": "im"
+          },
+          "certainty": 100
+        },
+        {
+          "string": [
+            "text/javascript"
+          ],
+          "offset": 1,
+          "regexp_compiled": {
+            "$regex": "<script[^>]+(language|type)\\s*=\\s*['\"]?([^'\"\\s]+)['\"]?",
+            "$options": "m"
+          },
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "Strict-Transport-Security",
+      [
+        {
+          "search": "headers[Strict-Transport-Security]",
+          "string": [
+            "max-age=15768000"
+          ],
+          "regexp_compiled": {
+            "$regex": "^(.*)$",
+            "$options": "m"
+          },
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "Title",
+      [
+        {
+          "name": "page title",
+          "string": "Мобильная версия ВКонтакте | ВКонтакте",
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "UncommonHeaders",
+      [
+        {
+          "name": "headers",
+          "string": "content-security-policy",
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "X-Frame-Options",
+      [
+        {
+          "string": "SAMEORIGIN",
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "X-Powered-By",
+      [
+        {
+          "name": "x-powered-by string",
+          "string": "KPHP/7.4.111564",
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "X-UA-Compatible",
+      [
+        {
+          "string": [
+            "IE=edge"
+          ],
+          "regexp_compiled": {
+            "$regex": "<meta http-equiv[\\s]*=[^>]*X-UA-Compatible[^>]*[\\s]+content[\\s]*=[\\s]*['|\"]?([a-z0-9=]+)[^>]*>",
+            "$options": "im"
+          },
+          "certainty": 100
+        }
+      ]
+    ],
+    [
+      "X-XSS-Protection",
+      [
+        {
+          "string": "1; report=/xss_reports",
+          "certainty": 100
+        }
+      ]
+    ]
+  ]
+]
